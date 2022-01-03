@@ -1,0 +1,79 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+      close
+    </mat-icon>
+  </button>
+  Детский Днепр
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+
+    <img class="avatar mat-elevation-z8" src="assets\img\12.jpg" />
+
+    <h4 class="name">Мероприятия</h4>
+    <!-- <p class="designation"></p> -->
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>list</mat-icon>
+      <span>Все</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>today</mat-icon>
+      <span>Сегодня</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>info</mat-icon>
+      <span>Скоро</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>language</mat-icon>
+      <span>Online</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button">
+      <mat-icon>search</mat-icon>
+      <span>Поиск</span>
+    </button>
+    <button mat-button class="menu-button">
+      <mat-icon>calendar_today</mat-icon>
+      <span>Календарь</span>
+    </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+
+      <mat-card class="example-card">
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="example-header-image"></div> -->
+          <mat-card-title>Трогательный зоопарк</mat-card-title>
+          <mat-card-subtitle>Днепр</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+        <mat-card-content>
+          <p>
+            Мы откроем перед Вами все загадки наших питомцев, познакомим с биологическими особенностями видов, расскажем
+            о среде обитания особей, предоставим возможность потрогать обитателей зоопарка и узнать о них много
+            интересного.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Сайт</button>
+          <!-- <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+      </mat-card>
+
+     
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
